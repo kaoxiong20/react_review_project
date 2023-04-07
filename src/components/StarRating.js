@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import Star from './Star';
+import Counter from './Counter';
+
 const StarRating = () => {
 
 const [albumRating, setAlbumRating] = useState(0);

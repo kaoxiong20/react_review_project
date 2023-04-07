@@ -1,21 +1,20 @@
 import React from "react";
 
-const Counter = () => {
-    const [star, StarRating] = React.useState(0);
+const Counter = (props) => {
 
-    const incrementScore = () => {
-        setStar(star + 1);
-    }
+    // const incrementScore = () => {
+    //     setStar(star + 1);
+    // }
 
-    const decrementScore = () => {
-        setStar(score - 1);
-    }
+    // const decrementScore = () => {
+    //     setStar(score - 1);
+    // }
 
     return (
         <div className="counter">
-            <button className="counter-action decrement" onClick={() => decrementScore}</button>
-            <span className="counter-score">{score}</span>
-            <button className="counter-action increment" onClick={() => incrementScore}</button>
+            <button className="counter-action decrement"> - </button>
+            <span className="counter-score">{props.score}</span>
+            <button className="counter-action increment"> + </button>
         </div>
     );
 }
