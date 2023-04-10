@@ -1,16 +1,13 @@
 import React, {useState} from 'react';
 import Star from './Star';
-import Counter from './Counter';
 
 const StarRating = () => {
-
-const [albumRating, setAlbumRating] = useState(0);
-
-const renderStars = () => {
-    let stars = [];
-    const maxRating = 5;
-    for (let i = 0; i < maxRating; i ++) {
-        stars.push(
+    const [albumRating, setAlbumRating] = useState(0);
+    const renderStars = () => {
+        let stars = [];
+        const maxRating = 5;
+            for (let i = 0; i < maxRating; i ++) {
+                stars.push(
             <Star
             isSelected={albumRating > i}
                 setRating={() => handleSetRating(i+1)}
